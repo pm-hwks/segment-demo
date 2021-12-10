@@ -16,6 +16,7 @@ import { logout } from './utils/auth';
 // Importing all components
 import * as SF from './components';
 
+
 const useStyles = makeStyles((theme) => ({
   app: {
     textAlign: 'center',
@@ -41,6 +42,7 @@ export const Routes: FC = () => {
       </Route>
       <div className={classes.app}>
           <SF.Header />
+
           <SF.Base />
           <SF.Footer />
       </div>
