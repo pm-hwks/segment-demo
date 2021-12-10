@@ -7,12 +7,18 @@ import { Home, Login, SignUp, Protected, PrivateRoute } from './views';
 import { Admin } from './admin';
 import { logout } from './utils/auth';
 
+import Footer from './components/Footer';
+import Header from './components/Header';
+
+
+
 const useStyles = makeStyles((theme) => ({
   app: {
     textAlign: 'center',
   },
   header: {
-    backgroundColor: '#282c34',
+    // backgroundColor: '#282c34',
+    backgroundColor: 'teal',
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
@@ -29,26 +35,37 @@ export const Routes: FC = () => {
 
   return (
     <Switch>
-      <Route path="/admin">
-        <Admin />
-      </Route>
-
       <div className={classes.app}>
-        <header className={classes.header}>
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={SignUp} />
-          <Route
-            path="/logout"
-            render={() => {
-              logout();
-              history.push('/');
-              return null;
-            }}
-          />
-          <PrivateRoute path="/protected" component={Protected} />
-          <Route exact path="/" component={Home} />
-        </header>
+        <Header />
+        hello
+        dello
+        <Footer />
       </div>
     </Switch>
   );
+
+  // return (
+  //   <Switch>
+  //     <Route path="/admin">
+  //       <Admin />
+  //     </Route>
+
+  //     <div className={classes.app}>
+  //       <header className={classes.header}>
+  //         <Route path="/login" component={Login} />
+  //         <Route path="/signup" component={SignUp} />
+  //         <Route
+  //           path="/logout"
+  //           render={() => {
+  //             logout();
+  //             history.push('/');
+  //             return null;
+  //           }}
+  //         />
+  //         <PrivateRoute path="/protected" component={Protected} />
+  //         <Route exact path="/" component={Home} />
+  //       </header>
+  //     </div>
+  //   </Switch>
+  // );
 };
