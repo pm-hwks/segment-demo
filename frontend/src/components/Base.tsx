@@ -1,9 +1,10 @@
 import React from 'react'
+import CommandLog from './CommandLog'
 
 export const Base = () => {
     return (
         <div>
-            This is the base section
+            <CommandLog />
         </div>
     )
 }
