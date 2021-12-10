@@ -7,23 +7,24 @@ import { Home, Login, SignUp, Protected, PrivateRoute } from './views';
 import { Admin } from './admin';
 import { logout } from './utils/auth';
 
-import Footer from './components/Footer';
-import Header from './components/Header';
+// import Footer from './components/Footer';
+// import Header from './components/Header';
+// import Base from './components/Base';
 
+//import { Header, Base, Footer } from './components';
 
+// Importing all components
+import * as SF from './components';
 
 const useStyles = makeStyles((theme) => ({
   app: {
     textAlign: 'center',
-  },
-  header: {
-    // backgroundColor: '#282c34',
     backgroundColor: 'teal',
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: 'top',
+    justifyContent: 'top',
     fontSize: 'calc(10px + 2vmin)',
     color: 'white',
   },
@@ -36,10 +37,9 @@ export const Routes: FC = () => {
   return (
     <Switch>
       <div className={classes.app}>
-        <Header />
-        hello
-        dello
-        <Footer />
+          <SF.Header />
+          <SF.Base />
+          <SF.Footer />
       </div>
     </Switch>
   );
