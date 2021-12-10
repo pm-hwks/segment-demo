@@ -36,11 +36,15 @@ export const Routes: FC = () => {
 
   return (
     <Switch>
+      <Route path="/admin">
+         <Admin />
+      </Route>
       <div className={classes.app}>
           <SF.Header />
           <SF.Base />
           <SF.Footer />
       </div>
+
     </Switch>
   );
 
